@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Users Dashboard</title>
+
+    <!-- Open Sans Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .navbar {
+        background-color:white;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        padding:20px;
+      }
+  
+      .navbar img {
+        margin-right: 10px;
+        height: 60px; /* Adjust height as needed */
+      }
+  
+      .marquee {
+        width: 100%;
+        overflow: hidden;
+      }
+  
+      .marquee span {
+        display: inline-block;
+        padding-right: 100%; /* Move the text out of the viewport */
+        animation: marquee 15s linear infinite;
+      }
+  
+      @keyframes marquee {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-100%); }
+      }
+      .marquee-text
+      {
+        color: black;
+        font-weight: bold;
+        font-family: "Bell MT", serif;
+        font-size: 35px;
+      }
+
+      .main-title {
+        display: flex;
+        justify-content: center; /* Horizontally center the content */
+      }
+
+      .courses-heading {
+        color: green;
+        text-decoration: underline; 
+      }
+
+      /* Styles for the search bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: rgb(247, 246, 252);
+}
+
+.search-input {
+  flex: 1;
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-btn, .close-btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.search-btn:hover, .close-btn:hover {
+  background-color: #0056b3;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <img src="SUCCESSNAVIGATOR.png" alt="Logo">
+      <div class="marquee">
+        <marquee direction="left" loop="" class="marquee-text"scrollamount="10">SUCCESSNAVIGATOR - Navigate Your Success: Your Ultimate Companion for Competitive Exams...!</marquee>
+      </div>
+    </div>
+    <div class="grid-container">
+      <!-- Header -->
+      <!-- End Header -->
+      <div class="search-bar" style="display: none;">
+    <input type="text" class="search-input" placeholder="Search...">
+    <button class="search-btn" onclick="search()">Search</button>
+    <button class="close-btn" onclick="closeSearch()">Close</button>
+  </div>
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="sidebar-brand">
+            <img  src="profile.jpg" alt="" style="max-width: 100px; max-height: 100px; border-radius: 100%; margin-left: 45px" >
+          </div>
+          <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+        </div>
+
+        <h1 style="margin-left: 45px">Dashboard</h1>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+            <a href="#">
+              <span class="material-icons-outlined">dashboard</span> Profile
+            </a>
+          </li>
+         <li class="sidebar-list-item">
+            <a href="#" onclick="toggleSearch()">
+              <span class="material-icons-outlined">search</span> Search
+            </a>
+          </li>
+
+          <li class="sidebar-list-item">
+            <a href="#">
+              <span class="material-icons-outlined">settings</span> Settings
+            </a>
+          </li>
+
+          <li class="sidebar-list-item">
+            <a href="#">
+              <span class="material-icons-outlined">leaderboard</span> Suggestions
+            </a>
+          </li>
+
+          <li class="sidebar-list-item">
+            <a href="../eduweb-master/index.html">
+              <span class="material-icons-outlined">logout</span> <a href="../eduweb-master/index.html">Logout</a> 
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <!-- End Sidebar -->
+
+      <!-- Main -->
+      <main class="main-container">
+        <div class="main-title">
+          <h2> USER'S DASHBOARD</h2>
+        </div>
+
+        <div class="main-title">
+          <h2 class="courses-heading">COURSES</h2>
+        </div>
+        <div class="main-cards">
+
+          <div class="card">
+            <div class="card-inner">
+              <a href="../user_profile/index.html"><img src="mpsc.png" alt="" style="max-width: 200px; max-height: 150px;"></a>
+              <h2>MPSC</h2>
+              <!--<span class="material-icons-outlined">thumb_up</span> -->
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <a href="#"><img src="neet.png" alt="" style="max-width: 200px; max-height: 150px;"></a>
+              <h2>NEET</h2>
+              <!--<span class="material-icons-outlined">subscriptions</span> -->
+            </div>
+            
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+             
+             <a href="#"><img src="upsc.png" alt="" style="max-width: 100x; max-height: 150px;"></a>
+              <h2>UPSC</h2>
+              <!--<span class="material-icons-outlined">groups</span>-->
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+             
+              <a href="#"><img src="railways.png" alt="" style="max-width: 100x; max-height: 150px;"></a>
+              <h2>RailWays</h2>
+              <!--<span class="material-icons-outlined">forum</span>-->
+            </div>
+          </div>
+
+        </div>
+
+        <div class="products">
+
+          <div class="product-card">
+            <h2 class="product-description">Latest Updates</h2>
+            <p class="text-secondary">
+              "Stay informed with the latest news updates covering global events, technology breakthroughs, and cultural shifts. Explore concise summaries capturing today's most significant developments from around the world."
+            </p>
+            <a href="../News/news.html" class="product-button"> <!-- Change the href to the desired destination page -->
+              <button type="button">
+                <span class="material-icons-outlined">add</span>
+              </button>
+            </a>
+          </div>
+
+          <div class="social-media">
+              <h2 class="mind-description">Mind Refreshing Section</h2>
+              <a href="../Games/Game2.html"><img src="mindgame1.png" style="max-height: 250px; max-width: 400px;"></a>
+              
+            <!--<div class="product">
+
+              <div>
+                <div class="product-icon background-red">
+                  <i class="bi bi-twitter"></i>
+                </div>
+                <h1 class="text-red">+274</h1>
+                <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+  
+              <div>
+                <div class="product-icon background-green">
+                  <i class="bi bi-instagram"></i>
+                </div>
+                <h1 class="text-green">+352</h1>
+                <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+  
+              <div>
+                <div class="product-icon background-orange">
+                  <i class="bi bi-facebook"></i>
+                </div>
+                <h1 class="text-orange">-126</h1>
+                <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+  
+              <div>
+                <div class="product-icon background-blue">
+                  <i class="bi bi-linkedin"></i>
+                </div>
+                <h1 class="text-blue">+102</h1>
+                <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+              
+            </div>
+          </div> -->
+
+        </div>
+      </main>
+      <!-- End Main -->
+
+    </div>
+      <script>
+      function toggleSearch() {
+      var searchBar = document.querySelector('.search-bar');
+      if (searchBar.style.display === 'none') {
+         searchBar.style.display = 'block';
+        } else {
+         searchBar.style.display = 'none';
+        }
+      }
+
+      function closeSearch() {
+        var searchBar = document.querySelector('.search-bar');
+        searchBar.style.display = 'none';
+      }
+
+    </script>
+    <!-- Scripts -->
+    <!-- Custom JS -->
+    <script src="scripts.js"></script>
+  </body>
+</html>

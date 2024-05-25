@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Responsive Snow Resort Website Design</title>
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- custom css link -->
+    <style>
+        .marquee-content {
+            text-align: center;
+        }
+
+        .marquee-text {
+            font-size: 50px;
+            font-family: "Bell MT", serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 5px;
+        }
+
+        .navbar img {
+            width: 200px;
+            height: auto;
+        }
+
+        .icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .icons .fas {
+            margin-left: 10px;
+            font-size: 24px;
+        }
+
+        body {
+            padding-top: 60px;
+        }
+
+        .navbar h1 {
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .package,
+        .menu,
+        .footer {
+            display: none;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- header section starts -->
+    <header class="header">
+        <div class="navbar">
+            <img src="../Mock Test/SUCCESSNAVIGATOR.png" alt="Logo">
+            <div class="marquee-content">
+                <marquee direction="left" loop="" class="marquee-text">SUCCESSNAVIGATOR - Navigate Your Success: Your Ultimate Companion for Competitive Exams...!</marquee>
+            </div>
+            <div class="icons"style="position: absolute; top: 0; right: 0; margin-top: 10px; margin-right: 10px;">
+                <div class="fas fa-user" id="login-btn"></div>
+            </div>
+        </div>
+
+        
+    </header>
+    <!-- header section ends -->
+
+    <!-- home section starts -->
+    <section class="home" id="home">
+        <div class="content">
+            <h3>Prepare For <span style="color: red;">MPSC</span> Exam With SUCCESSNAVIGATOR</h3>
+           
+        </div>
+    </section>
+    <!-- home section ends -->
+
+    <!-- banner section starts -->
+    <section class="banner">
+        <div class="box-container">
+            <!-- <a href="../MPSC_Questions/index1.php"> -->
+            <div class="box">
+                <a href="../MPSC_Questions/index1.php">
+                <img src="images/banner-1.png" alt="">
+                <h3>Download Prvious Year Question Papers</h3>
+                <p>Access previous year question papers to enhance your preparation. Get insights into exam patterns and practice with authentic questions.</p>
+            </a>
+            </div>
+
+            <div class="box">
+                <a href="../new_test/quiz.html">
+                <img src="images/banner-2.png" alt="">
+                <h3>Attempt Mock Tests</h3>
+                <p>Prepare for your MPSC exam effectively by taking mock tests that simulate the real exam environment. Practice with a variety of questions and improve your time management skills to boost your confidence on exam day.</p>
+            </a>
+            </div>
+
+            <div class="box">
+                <a href="../Youtube/utubechannels.html">
+                <img src="images/banner-3.png" alt="">
+                <h3>Find Out Best YouTube Channels</h3>
+                <p>Discover top-rated YouTube channels curated to provide valuable insights, tutorials, and resources to enhance your exam preparation experience.</p>
+            </div>
+
+            <div class="box">
+                <img src="images/banner-4.png" alt="">
+                <h3>View Books</h3>
+                <p>Find out the best books for your preparation.</p>
+            </div>
+        </div>
+    </section>
+    <!-- banner section ends -->
+
+    <!-- about us section starts -->
+    <section class="about" id="about">
+        <h1 class="heading">about <span> exam preparation</span></h1>
+        <div class="row">
+            <div class="image">
+                <img src="images/about.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Welcome To MPSC preparation</h3>
+                
+                    <ul style="list-style-type: none; padding: 0;">
+                        <li style="margin-bottom: 20px; font-size: 18px;">Check the Exam Pattern and Syllabus</li>
+                        <li style="margin-bottom: 20px; font-size: 18px;">Make a Timetable</li>
+                        <li style="margin-bottom: 20px; font-size: 18px;">Refer to Books and Online Resources</li>
+                        <li style="margin-bottom: 20px; font-size: 18px;">Solve Mock Tests</li>
+                        <li style="margin-bottom: 20px; font-size: 18px;">Track Preparation</li>
+                        <li style="margin-bottom: 20px; font-size: 18px;">Master Tricks</li>
+                        <li style="margin-bottom: 20px; font-size: 18px;">Enroll for Online Classes</li>
+                        <li style="margin-bottom: 20px; font-size: 18px;">Study Current Affairs Daily</li>
+                    </ul>
+                </div>
+                
+        </div>
+    </section>
+    <!-- about us section ends -->
+
+    <!-- footer section starts -->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3><i class="fas fa-snowflake"></i> snow resort</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda quos voluptas.</p>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+            <div class="box">
+                <h3>contact info</h3>
+                <p><i class="fas fa-phone"></i> +123-456-7890</p>
+                <p><i class="fas fa-envelope"></i> ninjashub4@gmail.com</p>
+                <p><i class="fas fa-map"></i> koontz, california</p>
+            </div>
+            <div class="box">
+                <h3>newsletter</h3>
+                <p>subscribe for latest updates</p>
+                <form action="">
+                    <input type="email" placeholder="enter your email" class="email">
+                    <input type="submit" value="subscribe" class="btn">
+                </form>
+            </div>
+        </div>
+        <div class="credit">crested by <span>ninjashub</span> | all rights are reserved!</div>
+    </section>
+    <!-- footer section ends -->
+
+    <!-- jquery cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- custom js link -->
+    <script src="script.js"></script>
+</body>
+</html>

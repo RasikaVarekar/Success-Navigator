@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Include your CSS file -->
+    <style>
+    .navbar {
+        background-color:white;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        padding:20px;
+      }
+  
+      .navbar img {
+        margin-right: 10px;
+        height: 60px; /* Adjust height as needed */
+      }
+  
+      .marquee {
+        width: 100%;
+        overflow: hidden;
+      }
+  
+      .marquee span {
+        display: inline-block;
+        padding-right: 100%; /* Move the text out of the viewport */
+        animation: marquee 15s linear infinite;
+      }
+  
+      @keyframes marquee {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-100%); }
+      }
+      .marquee-text
+      {
+        color: black;
+        font-weight: bold;
+        font-family: "Bell MT", serif;
+        font-size: 35px;
+      }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="../Mock Test/SUCCESSNAVIGATOR.png" alt="Logo">
+        <div class="marquee">
+          <marquee direction="left" loop="" class="marquee-text"scrollamount="10">SUCCESSNAVIGATOR - Navigate Your Success: Your Ultimate Companion for Competitive Exams...!</marquee>
+        </div>
+      </div>
+    <div class="quiz-container">
+        <img src="quiz.jpg" alt="Quiz Image" class="quiz-image">
+        <h1>Quiz</h1>
+        <div id="question-container"></div>
+        <div id="options-container"></div>
+        <button onclick="submitResponse()">Submit Response</button>
+        <button onclick="viewCorrectAnswer()">View Correct Answer</button>
+        <div id="response-msg"></div>
+    </div>
+
+    <script src="script.js"></script> <!-- Include your JavaScript file -->
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Records</title>
+  <!-- Add your CSS styles here -->
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <h1>User Records</h1>
+  <table id="user-table">
+    <tr>
+      <th>ID</th>
+      <th>Full Name</th>
+      <th>Email</th>
+      <th>Password</th>
+     
+    </tr>
+  </table>
+
+  <!-- Scripts -->
+  <script>
+    fetch('database1.php')
+      .then(response => response.json())
+      .then(data => {
+        // Generate table rows dynamically
+        const tableBody = document.getElementById('user-table');
+        data.forEach(user => {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td>${user.id}</td>
+            <td>${user.full_name}</td>
+            <td>${user.email}</td>
+            <td>${user.password}</td>
+           
+          `;
+          tableBody.appendChild(row);
+        });
+      })
+      .catch(error => console.error('Error fetching user records:', error));
+
+    
+  </script>
+</body>
+</html>

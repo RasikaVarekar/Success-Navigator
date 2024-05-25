@@ -1,0 +1,27 @@
+/* Add your CSS styles for the quiz interface */
+.quiz-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style quiz question and options */
+.question {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.option {
+    margin-bottom: 5px;
+}
+
+/* Highlight correct and incorrect responses */
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+}
